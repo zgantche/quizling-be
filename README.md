@@ -16,7 +16,7 @@
   2. Alice logs into Quizling.
   3. Alice creates a new gaming session (?), picks a quiz/trivia she has created
   4. She shares session Code ID with her friends
-  5. Zarya, Wilson, Hanzo, and Kerrigan open Quizling and enter the Code ID to join the session
+  5. Zarya, Wilson, Thrall, and Kerrigan open Quizling and enter the Code ID to join the session
   6. Done!
 - Trivia Flow
   . tbd
