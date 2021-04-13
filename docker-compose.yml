@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:9.6.11
+    container_name: node-capsule-postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: node-capsule_local
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres: 
