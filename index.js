@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const routes = require('./routes');
+const routes = require('./src/routes');
 
 //TODO: move this to routes, or delete
 app.get('/', (req, res) => {

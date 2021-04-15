@@ -1,4 +1,4 @@
-const { sequelize, User } = require('../sequelize');
+const { sequelize, User } = require('../../sequelize');
 
 const getHealth = () => {
     try {
