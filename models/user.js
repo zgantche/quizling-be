@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: 'username',
       },
-      accessToken: {
+      email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
