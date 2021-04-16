@@ -22,11 +22,5 @@ module.exports = (sequelize, DataTypes) => {
     },
     { paranoid: true }
   );
-  PlaidItems.associate = function (models) {
-    models.PlaidItems.belongsTo(models.User, {
-      onDelete: 'CASCADE',
-      foreignKey: 'userId',
-    });
-  };
   return PlaidItems;
 };

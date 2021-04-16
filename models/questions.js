@@ -2,6 +2,11 @@ module.exports = (sequelize, DataTypes) => {
     const Question = sequelize.define(
       'Questions',
       {
+        question_id: {
+          field: 'id',
+          type: DataTypes.INTEGER,
+          allowNull: false
+        },
         question_number: {
           field: 'question_number',
           type: DataTypes.INTEGER,
@@ -37,5 +42,11 @@ module.exports = (sequelize, DataTypes) => {
         paranoid: true
       }
     );
+    PlaidItems.associate = function (models) {
+      models.PlaidItems.belongsTo(models.Quiz, {
+        onDelete: 'CASCADE',
+        foreignKey: 'quizId',
+      });
+    };
     return Question;
 } 
