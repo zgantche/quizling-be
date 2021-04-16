@@ -22,5 +22,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     { paranoid: true }
   );
-  return PlaidItems;
-};
+  Quiz.associate = function (models) {
+    models.Quiz.belongsTo(models.User, {
+      onDelete: 'CASCADE',
+      foreignKey: 'id',
+    });
+  };
+  return Quiz;
+}
