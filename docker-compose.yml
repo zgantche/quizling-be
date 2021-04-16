@@ -2,11 +2,11 @@ version: "3"
 services:
   postgres:
     image: postgres:9.6.11
-    container_name: node-capsule-postgres
+    container_name: quizling-postgres
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
-      POSTGRES_DB: node-capsule_local
+      POSTGRES_DB: quizling_local
     volumes:
       - postgres:/data/postgres
     ports:
