@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Question = sequelize.define(
-      'Questions',
+      'Question',
       {
         question_id: {
           field: 'id',
