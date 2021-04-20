@@ -1,16 +1,17 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+const port = process.env.PORT || 3000;
 
 const routes = require('./src/routes');
 
-//TODO: move this to routes, or delete
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+io.on('connection', () => { 
+  //TODO: add socket logic
 });
 
 app.use('/', routes);
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
