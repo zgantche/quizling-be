@@ -4,9 +4,9 @@ const healthRouter = require('./health.route');
 
 apiRoute.use('/health', healthRouter);
 
-//TODO: move this to routes, or delete
+//TODO: temporary route for testing
 apiRoute.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send({ response: 'Hello World!' }).status(200);
 });
 
 module.exports = apiRoute;
