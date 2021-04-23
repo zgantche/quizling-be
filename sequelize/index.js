@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const db = {};
 
 const sequelize = new Sequelize({
-    database: 'node-capsule_local',
+    database: 'quizling_local',
     username: 'postgres',
     password: 'postgres',
     host: '127.0.0.1',
@@ -15,7 +15,7 @@ const sequelize = new Sequelize({
 
 const modelDefiners = [
 	// Add models here...
-    require('./models/user'),
+    // require('./models/user'),
 ];
 
 for (const modelDefiner of modelDefiners) {
