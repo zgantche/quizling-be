@@ -46,11 +46,12 @@ const updateUser = async (user, attr) => {
 /**
  TODO: Get function(s)
  */
- const getUser = async () => {
-  
+ const getAllUsers = async () => {
+  return User.findAll();
 };
 
 module.exports = {
   createUser,
   updateUser,
+  getAllUsers,
 }
