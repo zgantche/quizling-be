@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         field: 'email',
       },
+      deletedAt: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
     },
     { paranoid: true }
   );

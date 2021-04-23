@@ -36,14 +36,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             validate: { notEmpty: false },
             unique: false,
-        }
+        },
+        deletedAt: {
+          type: DataTypes.DATE,
+          allowNull: true,
+        },
       },
       {
         paranoid: true
       }
     );
-    PlaidItems.associate = function (models) {
-      models.PlaidItems.belongsTo(models.Quiz, {
+    Question.associate = function (models) {
+      models.Question.belongsTo(models.Quiz, {
         onDelete: 'CASCADE',
         foreignKey: 'quizId',
       });

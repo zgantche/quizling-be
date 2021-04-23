@@ -43,6 +43,17 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
         unique: false
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      deletedAt: {
+        type: Sequelize.DATE,
       }
     });
   },
